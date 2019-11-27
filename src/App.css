@@ -1,22 +1,317 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --ukuran-font:16px;
+  --latar-color: #0e1a36;
+  --tombol-color: #eb0e5a;
+  --text-color: white;
+}
+body{
+  font-family: 'Lato', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* div{
+  border: 1px solid violet;
+} */
+.header-container{
+  font-size: var(--ukuran-font);
+  color: var(--text-color);
+  background-color: var(--latar-color);
+  padding: 20px 40px;
+  /* jarak pertama untuk atas bawah */
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.brand-container{
+  margin-right: 20px;
+}
+.brand{
+  height: 43px;
+  width: 115px;
+}
+.menu-container{
+  margin-top: 12px;
+  display: flex;
+}
+.menukanan-container{
+  margin-left: auto;
+  padding-top: 5px;
+  display: flex;
+}
+.menu{
+  margin-right: 30px;
+  font-weight: 300;
+  transition: 200ms;
+}
+.menu:hover{
+  color: var(--tombol-color);
+  cursor: pointer;
+}
+.menu span{
+  font-size: 10px;
+}
+.menukanan-container .signin{
+  padding-top: 8px;
+  margin-right: 20px;
+}
+.menukanan-container .getstarted{
+  border: 2px solid var(--tombol-color);
+  width: 120px;
+  /* height: 30px; */
+  font-size: 15px;
+  border-radius: 20px;
+  /* padding: 10px 0px 0px 25px; */
+  padding-top: 7px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 0px;
+  margin-bottom: 5px;
+}
+.menukanan-container .getstarted span{
+  color: var(--tombol-color);
+  margin-left: 5px;
+  font-size: 12px;
+}
+.bars-container{
+  display: none;
+}
+
+
+
+
+
+
+/*jumbotron start*/
+.jumbotron-container{
+  height: 120vh;
+  color: white;
+  background-color: rgb(233, 148, 13);
+  padding-top: 90px;
+  /* margin-top: 88px; */
+  /* background-color: var(--latar-color); */
+}
+.jumbotron-component{
+  padding-top: 90px;
+}
+.jumbotron-textbig{
+  text-align: center;
+  font-family: 'Overpass', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+}
+.jumbotron-textsecond{
+  text-align: center;
+  /* font-family: 'Overpass', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-size: 24px;
+  line-height: 38.4px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.jumbotron-btn{
+  display: flex;
+  justify-content: center;
+}
+.button-container{
+  border: 2.5px solid var(--tombol-color);
+  background-color: var(--tombol-color);
+  text-align: center;
+  width: 130px;
+  font-size: 18px;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.jumbotron-img{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.img1{
+  position: absolute;
+  z-index: 1;
+  margin-top: 100px;
+  border-radius: 15px;
+  /* height: 572px;
+  width: 750px; */
+  height: 90vh;
+  width: 120vh;
+}
+.img2{
+  position: absolute;
+  z-index: 3;
+  margin-top: 140px;
+  margin-left: 400px;
+  height: 258px;
+  width: 300px;
+}
+.img3{
+  position: absolute;
+  z-index: 2;
+  margin-top: 60px;
+  margin-left: 350px;
+  height: 120.5;
+  width: 300px;
+}
+.img4{
+  position: absolute;
+  z-index: 4;
+  margin-top: 220px;
+  padding-right: 800px;
+  height: 234px;
+  width: 300px;
+}
+/*jumbotron end*/
+
+
+
+
+
+
+
+/*for tablet start*/
+@media only screen and (max-width:1200px){
+  .menu-container{
+      display: none;
+  }
+  .brand{
+      height: 35px;
+      width: 90px;
+  }
+  .header-container{
+      padding: 10px 40px;
+  }
+  .bars-container{
+      display: block;
+      margin-left: auto;
+      margin-top: 7px;
+      font-size: 20px;
+  }
+  .menukanan-container{
+      display: none;
+  }
+}
+/*for tablet end*/
+
+
+
+
+
+
+/* for 404 not found */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.notfound .notfound-404 {
+  position: relative;
+  height: 200px;
+  margin: 0px auto 20px;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 236px;
+  font-weight: 200;
+  margin: 0px;
+  color: #211b19;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.App-link {
-  color: #09d3ac;
+.notfound .notfound-404 h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #211b19;
+  background: #fff;
+  padding: 10px 5px;
+  margin: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
 }
+
+.notfound a {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 13px 23px;
+  background: #ff6300;
+  font-size: 18px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  color: #ff6300;
+  background: #211b19;
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 h1 {
+    font-size: 148px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    height: 148px;
+    margin: 0px auto 10px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 86px;
+  }
+  .notfound .notfound-404 h2 {
+    font-size: 16px;
+  }
+  .notfound a {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+}
+
+/* 404 not found end */
+
